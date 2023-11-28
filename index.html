@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+  <head>
+    <title>Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="styles.css">
+     <script src="https://kit.fontawesome.com/79d7fe67aa.js" crossorigin="anonymous"></script>
+  </head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark"onclick="closemenu()" ></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Front-End Web Developer</p>
+        <h1>Hi, I'm <span>Ikwuagwu Oge</span><br>From NIgeria</h1>
+      </div>
+    </div>
+  </div>
+<! -- about -->  
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.jpg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>My name is Ikwuagwu Ogechukwudi a front-end web developer with a strong command of <br> HTML<br> CSS <br> JAVASCRIPT <br> MySQL <br> REACT</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents" id="skills">
+            <ul>
+              <li><span>Front-end Web Development</span><br>Building beautiful and interactive interfaces</li>
+              <li><span>Database Administrator</span><br>Ensuring proper processing and storage of data for easy retrieval</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Upwork Freelancer</span><br>July 2020 - Till Date</li>
+              <li><span>Lead Developer at DBT COUTURE</span><br>February 2020 - November 2021</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Student of Computing at MIVA OPEN UNIVERSITY NIGERIA</span><br>September 2023 - November 2025</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!---services------ -->
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Front-end Web Developer</h2>
+        <p>Building intereactive and beautiful websites and SPA's</p>
+        <a href="#">Learn More</a>
+    </div>
+      </div>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-database"></i>
+        <h2>Database Administrator</h2>
+        <p>Using my strong command of SQL to ensure your data is stored and processed correctly for easy ad fast retrieval</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!---</div>--->
+  </div>
+</div>
+<!----portfolio--->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/work-2.jpeg">
+        <div class="layer">
+          <h3>Top Tier Web Interface development</h3>
+          <p>Designing beautiful and interactive user interfaces keeping nothing but the satisfaction of my clients first  using my skills in HTML CSS & JAVASCRIPT to create interactive and beautiful pages such as this one you are now seeing.</p>
+          <a href="#"><i class="fa-solid fa-link"></i></a>
+        </div>
+  </div>
+  <div class="work">
+        <img src="images/work-1.jpg">
+        <div class="layer">
+          <h3>Database Administrator</h3>
+          <p>Worked as a database administrator as a student of Renics College.</p>
+          <a href="#"><i class="fa-solid fa-database"></i></a>
+        </div>
+  </div>
+</div>
+
+<a href="#" class="btn">See more</a>
+
+<!---contact---->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact me</h1>
+        <p> <i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+        <p> <i class="fa-solid fa-phone"></i> (234) 9018798292</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/oge-ikwuagwu-351720299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/DanTrust01?s=09"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a href="images/OGE CV.docx" download class="btn btn2">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form><input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email Adress" required>
+              <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+        </form>      
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright &copy; Oge. Made by Oge</p>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+  function opentab(tabname) {
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    };
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    };
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  };
+  
+  var sidemenu = document.getElementById("sidemenu");
+
+  function openmenu () {
+    sidemenu.style.right = "0";
+  };
+
+  function closemenu () {
+    sidemenu.style.right = "-200px";
+  };
+
+
+</script>
+
+
+</body>
+  
+
+</html>

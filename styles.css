@@ -404,4 +404,10 @@ nav .fa-solid{
         margin-top: 10px;
         cursor: pointer;
     }
+.contact-right p i {
+	color: #ff004f;
+	margin-left: 15px;
+	font-size: 25px;
+	vertical-align: middle;
+}
 }
